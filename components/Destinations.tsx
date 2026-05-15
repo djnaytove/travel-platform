@@ -48,10 +48,11 @@ export default function Destinations() {
               className="group relative h-[420px] overflow-hidden rounded-[32px]"
             >
 
-              <img
-                src={item.image}
-                alt={item.city}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+              <div
+                aria-label={item.city}
+                className="h-full w-full bg-cover bg-center transition duration-500 group-hover:scale-110"
+                role="img"
+                style={{ backgroundImage: `url(${item.image})` }}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
